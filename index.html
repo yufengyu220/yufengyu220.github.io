@@ -14,56 +14,21 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
   />
-  <!-- 自定义样式 -->
-  <style>
-    .main-container {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .content-wrapper {
-      flex: 0 0 66.666667%;
-      max-width: 66.666667%;
-      padding-right: 15px;
-    }
-    .sidebar-wrapper {
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
-      padding-left: 15px;
-    }
-    .sidebar {
-      height: 100%;
-      background-color: #0d6efd;
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-    }
-    @media (max-width: 992px) {
-      .main-container {
-        flex-direction: column;
-      }
-      .content-wrapper, .sidebar-wrapper {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 0;
-      }
-      .sidebar-wrapper {
-        padding-top: 20px;
-      }
-    }
-  </style>
+  <!-- 引入自定义 CSS -->
+  <link rel="stylesheet" href="static/css/main.css" />
 </head>
 <body>
   <div class="container my-5">
-    <div class="main-container">
-      <!-- 左侧内容区 -->
-      <div class="content-wrapper">
+    <div class="row">
+      <!-- 左侧内容区（占8列） -->
+      <div class="col-md-8">
         <!-- About Me 模块 -->
         <section class="about-me mb-4 p-3 bg-white rounded shadow">
           <h2><i class="bi bi-person-circle text-primary"></i> ABOUT ME</h2>
           <p>
            I am currently an Associate Professor at the Department of Statistics, Guangzhou University, China. My research interests are in deep learning, machine learning, computer vision and data mining.
           </p>
+
         </section>
 
         <!-- Research Interests 模块 -->
@@ -78,7 +43,6 @@
         <!-- Selected Publications 模块 -->
         <section class="publications p-3 bg-white rounded shadow">
           <h2><i class="bi bi-file-text text-primary"></i> SELECTED PUBLICATIONS</h2>
-          <ul>
           <ul>
             <li>
               <strong>Learning Dynamic-Sensitivity Enhanced Correlation Filter With Adaptive Second-Order Difference Spatial Regularization for UAV Tracking</strong><br>
@@ -276,46 +240,35 @@
               IEEE Access 7: 107389-107399(2019)
             </li>
           </ul>
-        </section>
+          </section>
       </div>
 
-      <!-- 右侧侧边栏 -->
-      <div class="sidebar-wrapper">
-        <div class="sidebar">
-          <!-- 头像 -->
-          <div class="text-center mb-4">
-            <img
-              src="static/assets/img/photo.png"
-              class="rounded-circle"
-              alt="Fengmao Lv"
-              style="width: 150px; height: 150px; object-fit: cover;"
-            />
-            <h2 class="mt-2">Fengmao Lv</h2>
-            <p class="text-light">Associate Professor</p>
-          </div>
+      <!-- 右侧侧边栏（占4列） -->
+      <div class="col-md-4 sidebar bg-primary text-white p-4 rounded shadow">
+        <!-- 头像 -->
+        <div class="text-center mb-4">
+          <img src="static/assets/img/photo.png" class="rounded-circle" alt="Yufeng Yu"
+            style="width: 150px; height: 150px; object-fit: cover;" />
+          <h2 class="mt-2">Yufeng Yu</h2>
+          <p class="text-light">Associate Professor</p>
+        </div>
 
-          <!-- 邮箱 -->
-          <div class="mb-4">
-            <p><i class="bi bi-envelope"></i> yufengyu@gzhu.edu.cn</p>
-            <p><i class="bi bi-envelope"></i> yuyufeng220@163.com</p>
-          </div>
+        <!-- 邮箱 -->
+        <div class="mb-4">
+          <p><i class="bi bi-envelope"></i> yufengyu@gzhu.edu.cn</p>
+          <p><i class="bi bi-envelope"></i> yuyufeng220@163.com</p>
+        </div>
 
-          <!-- 教育经历 -->
-          <div>
-            <h3 class="text-light">EDUCATION</h3>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <strong>Ph.D. in Computer Science</strong><br>
-                University of Electronic Science and Technology of China<br>
-                2013 - 2018
-              </li>
-              <li>
-                <strong>B.E. in Computer Science</strong><br>
-                University of Electronic Science and Technology of China<br>
-                2009 - 2013
-              </li>
-            </ul>
-          </div>
+        <!-- 教育经历 -->
+        <div>
+          <h3 class="text-light">EDUCATION</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <strong>Ph.D. in Statistics</strong><br>
+              Sun Yat-sen University<br>
+              2014 - 2017
+            </li>
+          </ul>
         </div>
       </div>
     </div>
