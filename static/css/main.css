@@ -5,6 +5,51 @@
     --h-title-color:#3948d2;
 }
 
+/* 侧边栏基础样式 */
+.sidebar {
+  background-color: #2C8E99; /* 蓝绿色背景，与目标图匹配 */
+  color: #fff;
+}
+
+/* 侧边栏标题 */
+.sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* 侧边栏文字颜色（浅白色） */
+.sidebar .text-light {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 左侧模块通用样式 */
+.about-me, .research, .publications {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 模块标题图标颜色 */
+.about-me h2 i, .research h2 i, .publications h2 i {
+  color: #2C8E99; /* 与侧边栏背景色一致 */
+  margin-right: 10px;
+}
+
+/* 列表样式（带圆点） */
+.research ul, .publications ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* 响应式适配（移动端堆叠布局） */
+@media (max-width: 768px) {
+  .sidebar {
+    margin-top: 20px; /* 与左侧内容区拉开距离 */
+  }
+}
+
 .header {
     border-bottom: solid 2px var(--bs-blue);
     z-index: 10000;
